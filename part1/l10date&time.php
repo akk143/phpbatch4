@@ -37,10 +37,6 @@ echo "This is format a=".$date; // am pm
 $date = date("A",$time);
 echo "This is format A=".$date; // AM PM
 
-$date = date("a",$time);
-echo "This is format a=".$date;
-
-
 $date = date("d",$time);
 echo "This is format d=".$date; // 05 day leading 0
 
