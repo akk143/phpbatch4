@@ -1,0 +1,10 @@
+PHP 8
+
+Classic
+OOP Concept
+MVC
+
+printer server
+databse server
+web serve`
+firewall server etc....
