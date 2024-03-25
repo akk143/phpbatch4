@@ -109,5 +109,107 @@ $subtitle = "Welcome to My Country";
 echo trim($subtitle,"Wel");  // come to My Country
 echo trim($subtitle,"try");  // come to My CountryWelcome to My Coun
 
+// => ltrim() Function (space delete)
+// => ltrim(string,characters) Function
+
+$say = '/hi/';
+echo ltrim($say,"/");  // /hi
+
+// => rtrim() Function (space delete)
+// => rtrim(string,characters) Function
+
+$say = '/hi/';
+echo rtrim($say,"/");  // hi/
+
+
+
+
+// => str_repeat() Function (space delete)
+// => str_repeat(string,count) Function
+
+echo str_repeat('အကျယ်ကြီး',3); // အကျယ်ကြီးအကျယ်ကြီးအကျယ်ကြီး
+
+
+
+// => strcmp(string1,string2) Function    (case-sensitive)
+
+//  0  = if string1 and string2 are equal
+// <0  = if string1 is less than string2 
+// >0  = if string1 is greater string2 
+
+echo strcmp("i love my job","i love my job"); // 0
+echo strcmp("i love my job","i love");  // 7
+echo strcmp("i love","i love my job");  // -7
+
+
+// => explode(seperator,string,limit) Function
+
+$words =  "Welcome to my Country";
+echo "<pre>" .print_r(explode(" ",$words,true)). "</pre>";  //  [0] => Welcome to my Country
+echo "<pre>" .print_r(explode(" ",$words,1)). "</pre>";     //  [0] => Welcome to my Country
+echo "<pre>" .print_r(explode(" ",$words,2)). "</pre>";     // [0] => Welcome[1] => to my Country
+echo "<pre>" .print_r(explode(" ",$words,3)). "</pre>";     //  [0] => Welcome [1] => to [2] => my Country
+
+
+// => implode(seperator,array) Function  
+
+$words =  ["Welcome","to","my","City"];
+echo implode(" ",$words);  // Welcome to my City
+echo implode("-",$words);  // Welcome-to-my-City
+
+
+// => join(seperator,array) Function  
+
+$words =  ["Welcome","to","my","Village"];
+echo join(" ",$words);  // Welcome to my Village
+echo join("-",$words);  // Welcome-to-my-Village
+
+
+// => number_format(number) Function
+// => number_format(number,decimal) Function
+
+echo number_format(100000); //100,000
+echo number_format(100000,2); //100,000.00
+
+
+// => stripslashes(string) Function
+
+$str = 'she\'s my mother';
+echo($str); // she's my mother
+
+$str = "he\'s my father";
+echo($str);               // he\'s my father
+echo stripslashes($str);  // he's my father
+
+
+// => basename(path)  (အသုံးများ)
+// => basename(path,suffix)
+
+$path = "./assests/img/cover.jpg";
+echo ($path);                 // ./assests/img/cover.jpg
+echo basename($path);         // cover.jpg
+echo basename($path,".jpg");  // cover
+
+
+// => pathinfo(path)  (အသုံးများ)
+// => pathinfo(path,falgs)
+
+PATHINFO_DIRNAME
+PATHINFO_BASENAME
+PATHINFO_EXTENSION
+PATHINFO_FILENAME
+
+
+
+$filepaths = "./assests/img/cover.jpg";
+echo "<pre>".print_r(pathinfo($filepaths),true)."</pre>";  //  [dirname] => ./assests/img [basename] => cover.jpg [extension] => jpg [filename] => cover
+echo pathinfo($filepaths)["filename"]; // cover
+echo pathinfo($filepaths)["extension"]; // jpg
+
+
+echo pathinfo($filepaths,PATHINFO_DIRNAME);  // ./assests/img
+echo pathinfo($filepaths,PATHINFO_FILENAME);  // cover
+
+
 
 ?>
