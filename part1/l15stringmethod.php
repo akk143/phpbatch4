@@ -14,7 +14,7 @@ $text = "Save Myanmar Country";
 echo str_word_count($text);  // 3
 
 echo str_word_count($text,0);  // 3
-echo "<pre>".print_r(str_word_count($text,1,true))."</pre>";  // ([0] => Save[1] => Myanmar [2] => Country [3])
+echo "<pre>".print_r(str_word_count($text,1,true))."</pre>";  // ([0] => Save[1] => Myanmar [2] => Country)
 echo "<pre>".print_r(str_word_count($text,2,true))."</pre>";  // ([0] => Save[5] => Myanmar [13] => Country [13])
 
 
@@ -31,7 +31,7 @@ echo ucwords($country,",");  // Welcome To Myanmar Country,I live in yangon
 // => ucfirst(string) Function
 
 $message = "welcome to yangon,i live in tamwe";
-echo ucfirst($message);
+echo ucfirst($message);  // Welcome to yangon,i live in tamwe
 
 
 
@@ -44,13 +44,13 @@ echo lcfirst($msg);  // welcome To Yangon
 // => strtoupper(string) Function
 
 $string = "welcome to my country";
-echo strtoupper($string);
+echo strtoupper($string);  // WELCOME TO MY COUNTRY
 
 
 // => strtolower(string) Function
 
 $str = "WElcome To my Country";
-echo strtolower($str);
+echo strtolower($str);  // welcome to my country
 
 
 // => chunk_split(string,length,delimiter) Function
@@ -147,7 +147,7 @@ echo strcmp("i love","i love my job");  // -7
 $words =  "Welcome to my Country";
 echo "<pre>" .print_r(explode(" ",$words,true)). "</pre>";  //  [0] => Welcome to my Country
 echo "<pre>" .print_r(explode(" ",$words,1)). "</pre>";     //  [0] => Welcome to my Country
-echo "<pre>" .print_r(explode(" ",$words,2)). "</pre>";     // [0] => Welcome[1] => to my Country
+echo "<pre>" .print_r(explode(" ",$words,2)). "</pre>";     //  [0] => Welcome [1] => to my Country
 echo "<pre>" .print_r(explode(" ",$words,3)). "</pre>";     //  [0] => Welcome [1] => to [2] => my Country
 
 
